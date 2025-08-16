@@ -5,10 +5,10 @@ const [count,setCount]=useState(0);
 
 
 const incHandler=(e)=>{
-    setCount(count+1)
+     setCount((prev) => prev + 1);
 }
 const decHandler=()=>{
-    setCount(count-1);
+    setCount((prev)=>prev-1);
 }
     return (
         <div>
@@ -19,7 +19,7 @@ const decHandler=()=>{
             <button
             type='button'
             onClick={decHandler}
-            >decrement</button>
+            >Decrement</button>
         </div>
     )
 }
